@@ -1,13 +1,88 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Lato", sans-serif;
+  padding: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media print {
+  a {
+    text-decoration: none !important;
+    content: none !important;
+    border: none !important;
+  }
+  i {
+    text-decoration: none !important;
+    content: none !important;
+    border: none !important;
+  }
+}
+
+.flex-pull-right {
+  margin-left: auto;
+}
+
+.hyperlinks {
+  position: relative;
+  top: 3px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.address {
+  font-size: 18px;
+}
+
+.gray-100 {
+  color: #f8f9fa;
+}
+
+.gray-200 {
+  color: #e9ecef;
+}
+
+.gray-300 {
+  color: #dee2e6;
+}
+
+.gray-400 {
+  color: #ced4da;
+}
+
+.gray-500 {
+  color: #adb5bd;
+}
+
+.gray-600 {
+  color: #6c757d;
+}
+
+.gray-700 {
+  color: #495057;
+}
+
+.gray-800 {
+  color: #343a40;
+}
+
+.gray-900 {
+  color: #212529;
+}
+
+.skill-chip {
+  border: 2px solid #212529;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 3px;
+  margin-right: 3px;
+  box-shadow: 1px 2px #343a40;
+}
+
+.badge {
+  font-size: 40px;
+  color: #343a40;
+  padding: 5px;
 }
