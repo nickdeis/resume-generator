@@ -1,9 +1,10 @@
-import React, { ReactElement } from "react";
+import { ReactElement, CSSProperties } from "react";
+import MarkdownSpan from "./MarkdownSpan";
 
 type TitleAndDateProps = {
   title: string;
   subtext?: string;
-  start: number;
+  start?: number;
   /**
    * Don't use if only one year
    */
@@ -17,23 +18,24 @@ export function TitleAndDate({
   end,
 }: TitleAndDateProps) {
   return (
-    <div>
-      <span style={{ fontSize: 20, fontWeight: 900 }}>{title}</span>
+    <div className="text-base">
+      <span className="font-black">{title}</span>
       {subtext && (
         <span
+          className="italic"
           style={{
             paddingLeft: 5,
-            fontSize: 18,
             fontWeight: 500,
-            fontStyle: "italic",
           }}
         >
           {subtext}
         </span>
       )}
-      <span className="float-right" style={{ fontSize: 20, fontWeight: 500 }}>
-        <span>{start}</span>
-        {end && <span style={{ paddingLeft: 2, paddingRight: 2 }}>–</span>}
+      <span className="float-right font-light text-base">
+        {start && <span>{start}</span>}
+        {end && start && (
+          <span style={{ paddingLeft: 2, paddingRight: 2 }}>–</span>
+        )}
         {end && <span>{end}</span>}
       </span>
     </div>
@@ -45,12 +47,12 @@ type JobProps = {
   employer?: string;
   points?: (ReactElement | string)[];
   //Start year
-  start: number;
+  start?: number;
   /**
    * Don't use if only one year
    */
   end?: number | "Present";
-  listStyle?: React.CSSProperties;
+  listStyle?: CSSProperties;
 };
 export function Job({
   title,
@@ -64,9 +66,18 @@ export function Job({
     <div>
       <TitleAndDate title={title} subtext={employer} start={start} end={end} />
       {points && (
-        <ul style={{ paddingLeft: 20, fontSize: 18, ...listStyle }}>
+        <ul
+          className="list-disc"
+          style={{
+            fontSize: 13,
+            paddingLeft: 20,
+            ...listStyle,
+          }}
+        >
           {points.map((point) => (
-            <li>{point}</li>
+            <li>
+              <MarkdownSpan>{point}</MarkdownSpan>
+            </li>
           ))}
         </ul>
       )}

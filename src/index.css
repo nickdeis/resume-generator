@@ -1,6 +1,8 @@
+@import "tailwindcss";
+
+
 body {
   font-family: "Lato", sans-serif;
-  padding: 10px;
 }
 
 @media print {
@@ -23,7 +25,7 @@ body {
 .hyperlinks {
   position: relative;
   top: 3px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -75,14 +77,10 @@ body {
   padding-right: 5px;
   border-radius: 5px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   margin-left: 3px;
   margin-right: 3px;
   box-shadow: 1px 2px #343a40;
 }
 
-.badge {
-  font-size: 40px;
-  color: #343a40;
-  padding: 5px;
-}
+

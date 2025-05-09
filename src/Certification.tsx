@@ -1,0 +1,21 @@
+import { CertConfig } from "./config";
+import { Job } from "./Job";
+
+export default function Certification({
+  name,
+  source,
+  startYear,
+  endYear,
+  note,
+}: CertConfig) {
+  return (
+    <Job
+      title={name}
+      employer={source}
+      start={startYear}
+      end={endYear}
+      points={note ? [note] : undefined}
+      listStyle={{ listStyleType: "none", paddingLeft: 0 }}
+    />
+  );
+}
