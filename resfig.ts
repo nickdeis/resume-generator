@@ -35,7 +35,16 @@ export type ProjectConfig = {
   tech: string[];
 };
 
-export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
+export function getConfig() {
+  try {
+    const config = require("./override.resfig.json") as ResumeConfig;
+    return config;
+  } catch (e) {
+    return DEFAULT_RESUME_CONFIG;
+  }
+}
+
+const DEFAULT_RESUME_CONFIG: ResumeConfig = {
   Skills: {
     Languages: ["Typescript", "Python", "Java", "Scala", "SQL"],
     Frontend: ["React", "Tailwind", "Webpack", "d3", "Mapbox", "Vite"],

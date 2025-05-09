@@ -3,7 +3,7 @@ import "./index.css";
 import Resume from "./Resume";
 import { StrictMode } from "react";
 import { InlineStyle } from "./InlineStyle";
-import { DEFAULT_RESUME_CONFIG } from "../resfig";
+import { getConfig } from "../resfig";
 const root = document.getElementById("root");
 
 const A5_PAPER = `
@@ -27,7 +27,7 @@ if (root) {
   createRoot(root).render(
     <StrictMode>
       <InlineStyle content={A5_PAPER}></InlineStyle>
-      <Resume resumeConfig={DEFAULT_RESUME_CONFIG} />
+      <Resume resumeConfig={getConfig()} />
     </StrictMode>
   );
 }

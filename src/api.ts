@@ -1,6 +1,6 @@
 import express from "express";
 import puppeteer from "puppeteer";
-import { DEFAULT_RESUME_CONFIG } from "../resfig";
+import { getConfig } from "../resfig";
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.get("/api/pdf", async (req, res) => {
 });
 
 app.get("/api/json", (req, res) => {
-  res.json(DEFAULT_RESUME_CONFIG);
+  res.json(getConfig());
 });
 
 export const handler = app;
