@@ -1,6 +1,6 @@
 import express from "express";
 import puppeteer from "puppeteer";
-import { DEFAULT_RESUME_CONFIG } from "./config";
+import { DEFAULT_RESUME_CONFIG } from "../resfig";
 
 const app = express();
 

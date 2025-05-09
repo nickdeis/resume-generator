@@ -1,5 +1,5 @@
 import Certification from "./Certification";
-import { ResumeConfig } from "./config";
+import { ResumeConfig } from "../resfig";
 import { Header } from "./Header";
 import { Job } from "./Job";
 import { Link } from "./Link";

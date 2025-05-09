@@ -3,7 +3,7 @@ import "./index.css";
 import Resume from "./Resume";
 import { StrictMode } from "react";
 import { InlineStyle } from "./InlineStyle";
-import { DEFAULT_RESUME_CONFIG } from "./config";
+import { DEFAULT_RESUME_CONFIG } from "../resfig";
 const root = document.getElementById("root");
 
 const A5_PAPER = `

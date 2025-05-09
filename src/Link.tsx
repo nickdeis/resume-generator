@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { LinkConfig } from "./config";
+import type { LinkConfig } from "../resfig";
 
 export type LinkProps = JSX.IntrinsicElements["a"] & LinkConfig;
 

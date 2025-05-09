@@ -1,5 +1,5 @@
 import MarkdownSpan from "./MarkdownSpan";
-import { ProjectConfig } from "./config";
+import { ProjectConfig } from "../resfig";
 
 export default function Project({ name, points, link, tech }: ProjectConfig) {
   return (

@@ -1,4 +1,4 @@
-import { CertConfig } from "./config";
+import { CertConfig } from "../resfig";
 import { Job } from "./Job";
 
 export default function Certification({
