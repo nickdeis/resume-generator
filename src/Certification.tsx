@@ -8,6 +8,7 @@ export default function Certification({
   endYear,
   note,
 }: CertConfig) {
+  "use memo";
   return (
     <Job
       title={name}

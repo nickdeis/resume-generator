@@ -12,6 +12,7 @@ export type ResumeProps = {
 };
 
 export default function Resume({ resumeConfig }: ResumeProps) {
+  "use memo";
   const { Skills, Links, Experience } = resumeConfig;
   return (
     <div>

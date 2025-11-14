@@ -7,6 +7,7 @@ type SkillRowProps = {
 };
 
 export function SkillRow({ category, skills, className }: SkillRowProps) {
+  "use memo";
   return (
     <div
       className={clsx(className, "row flex flex-row items-center")}

@@ -5,6 +5,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+
 @media print {
   a {
     text-decoration: none !important;
@@ -15,6 +16,17 @@ body {
     text-decoration: none !important;
     content: none !important;
     border: none !important;
+  }
+}
+
+@page {
+  size: Letter portrait;
+}
+
+/**For BW printers**/
+@media (forced-colors: active) {
+  a {
+    color: black;
   }
 }
 
@@ -81,6 +93,10 @@ body {
   margin-left: 3px;
   margin-right: 3px;
   box-shadow: 1px 2px #343a40;
+}
+
+.md-span * a {
+  color: var(--color-blue-500);
 }
 
 

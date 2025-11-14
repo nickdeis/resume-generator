@@ -1,9 +1,11 @@
 import clsx from "clsx";
 import type { LinkConfig } from "../resfig";
+import type { JSX } from "react";
 
 export type LinkProps = JSX.IntrinsicElements["a"] & LinkConfig;
 
 export function Link({ icon, text, ...restOf }: LinkProps) {
+  "use memo";
   return (
     <a {...restOf}>
       <i style={{ fontSize: 24 }} className={clsx(icon)}></i>

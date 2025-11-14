@@ -17,6 +17,7 @@ export function TitleAndDate({
   start,
   end,
 }: TitleAndDateProps) {
+  "use memo";
   return (
     <div className="text-base">
       <span className="font-black">{title}</span>
@@ -62,6 +63,7 @@ export function Job({
   points,
   listStyle = {},
 }: JobProps) {
+  "use memo";
   return (
     <div>
       <TitleAndDate title={title} subtext={employer} start={start} end={end} />

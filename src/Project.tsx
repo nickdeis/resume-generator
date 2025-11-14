@@ -2,6 +2,7 @@ import MarkdownSpan from "./MarkdownSpan";
 import { ProjectConfig } from "../resfig";
 
 export default function Project({ name, points, link, tech }: ProjectConfig) {
+  "use memo";
   return (
     <div className="py-2 px-2 border border-black flex flex-col">
       <a className="text-base text-blue-500" href={link}>

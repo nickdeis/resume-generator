@@ -10,6 +10,7 @@ export function Section({
   children,
   className,
 }: React.PropsWithChildren<SectionTypes>) {
+  "use memo";
   return (
     <section className={className} style={{ paddingBottom: 10 }}>
       <span className="font-bold" style={{ fontWeight: 700, fontSize: 18 }}>

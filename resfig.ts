@@ -76,12 +76,14 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       title: "Lead Software Engineer, Data Visualization",
       employer: "Interos",
       startYear: 2021,
-      endYear: "Present",
+      endYear: 2025,
       achievements: [
+        "Lead and developed a team that ships industry first and patented visualizations",
         "Deployed a next-gen conversational AI that replies with maps, graphs, and tables",
+        "Led the technical effort to certify the core platform for IL5, FedRAMP High, and SOC2 compliance",
+        "Initialized the companies product-led marketing, increasing inbound leads by 23%",
         "Saved $600k+ and increased performance 2x by building an AI-powered search implementation",
         "Built a tracker of natural disasters and their impact on supply chains using Protomaps and PostGIS",
-        "Led a team that developed industry leading and patented visualizations",
       ],
     },
     {
@@ -158,7 +160,7 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       points: [
         "An eslint plugin to find text that might be credentials",
         "Over **140 stars** on github",
-        "Used by SpaceX, Spotify, and Microsoft",
+        "Used by SpaceX and Microsoft",
       ],
     },
     {
@@ -167,9 +169,29 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       points: [
         "*Yes!* The resume you are currently reading!",
         "Focus on Flexbox and Grid",
-        "APIs to convert to PDF",
+        "APIs to convert to PDF/JSON",
       ],
       tech: ["Vite", "Tailwind", "Puppeteer"],
+    },
+    {
+      name: "Tariff Explorer",
+      link: "https://www.interos.ai/tariffs-explorers/",
+      tech: ["Vite", "Postgres", "d3"],
+      points: [
+        "Built E2E in less than three weeks",
+        "[Featured on NewsWeek](https://www.newsweek.com/trump-tariff-simulator-which-products-hit-hardest-2068991)",
+        "Responsive and SEO friendly via SSR",
+      ],
+    },
+    {
+      name: "eslint-plugin-notice",
+      link: "https://github.com/nickdeis/eslint-plugin-notice",
+      points: [
+        "Built to maintain very large codebases",
+        "90k+ weekly downloads",
+        "Used by Spotify and Adobe",
+      ],
+      tech: ["Github Actions", "ESLint"],
     },
   ],
 };

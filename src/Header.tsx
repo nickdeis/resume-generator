@@ -1,4 +1,5 @@
 export function Header() {
+  "use memo";
   return (
     <>
       <div className="flex flex-row content-center items-center">
