@@ -10,13 +10,15 @@ export default function Certification({
 }: CertConfig) {
   "use memo";
   return (
-    <Job
-      title={name}
-      employer={source}
-      start={startYear}
-      end={endYear}
-      points={note ? [note] : undefined}
-      listStyle={{ listStyleType: "none", paddingLeft: 0 }}
-    />
+    <div className="pt-0.5">
+      <Job
+        title={name}
+        employer={source}
+        start={startYear}
+        end={endYear}
+        points={note ? [note] : undefined}
+        listStyle={{ listStyleType: "none", paddingLeft: 0 }}
+      />
+    </div>
   );
 }

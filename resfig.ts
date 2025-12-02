@@ -78,12 +78,12 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2021,
       endYear: 2025,
       achievements: [
-        "Lead and developed a team that ships industry first and patented visualizations",
+        "Led and developed a team that ships industry first and patented visualizations",
         "Deployed a next-gen conversational AI that replies with maps, graphs, and tables",
         "Led the technical effort to certify the core platform for IL5, FedRAMP High, and SOC2 compliance",
         "Initialized the companies product-led marketing, increasing inbound leads by 23%",
         "Saved $600k+ and increased performance 2x by building an AI-powered search implementation",
-        "Built a tracker of natural disasters and their impact on supply chains using Protomaps and PostGIS",
+        "Built a tracker of natural disasters and their impact on supply chains using Mapbox and PostGIS",
       ],
     },
     {
@@ -92,7 +92,7 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2019,
       endYear: 2021,
       achievements: [
-        "Unified several products under a federated API using GraphQL, Serverless, and Step Functions",
+        "Unified several products under a federated API using GraphQL, AWS Lambda, and AWS Step Functions",
         "Built a serverless graph visualization tool using AWS Neptune, React, and d3",
         "Worked with several teams across lines of business to visualize graph data",
       ],
@@ -103,11 +103,9 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2014,
       endYear: 2019,
       achievements: [
-        "Designed the UI/UX for an AI enablement platform using React, Webpack, and Vert.x",
-        "Built realtime user experiences using Websockets",
-        "Programmed high performance manifold learning visualizations using WebGL",
+        "Built a realtime AI/ML enablement platform using Websockets, React, Webpack, and Spring",
         "Led the engineering effort for a national level project using Apache Storm and Spring",
-        "Extended Elastic Search to have both document and field security for banking applications",
+        "Extended ElasticSearch to have both document and field security for banking applications",
       ],
     },
     {
@@ -116,8 +114,8 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2013,
       endYear: 2014,
       achievements: [
-        "Configured and deployed Spring web applications",
-        "Extracted and analyzed data using SAS for Tier One banks and insurers",
+        "Configured and deployed Spring web applications for Tier One Banks and Insurers",
+        "Extracted and analyzed network data using SAS, SQL, and Python",
       ],
     },
     {
@@ -133,7 +131,7 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       endYear: 2012,
       achievements: [
         "Consulted on all data collection and analysis for the largest cycling safety campaign in the history of Ohio",
-        "Wrote statistical reports, illustrated infographs, and presented results to the Ohio Department of Transportation",
+        "Wrote statistical reports, illustrated infographs, and presented results to ODOT",
       ],
     },
   ],

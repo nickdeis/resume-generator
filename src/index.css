@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-zero: 0rem;
+  /**9in or 864 pixels**/
+  --breakpoint-paper: 54rem;
+  /**8in**/
+  --breakpoint-sprint: 48rem;
+}
 
 body {
   font-family: "Lato", sans-serif;
 }
-
 
 @media print {
   a {
@@ -17,6 +23,23 @@ body {
     content: none !important;
     border: none !important;
   }
+  #root {
+    width: 8.5in;
+    height: 11in;
+    background: white;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+}
+
+.w-responsive-md {
+  @apply max-md:w-full max-md:max-w-screen max-md:mx-auto;
 }
 
 @page {
@@ -30,51 +53,25 @@ body {
   }
 }
 
+@media (width < 900px) {
+  #root {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+@media (width < 700px) {
+  .md-span * p {
+    white-space: normal;
+  }
+}
+
 .flex-pull-right {
   margin-left: auto;
 }
 
-.hyperlinks {
-  position: relative;
-  top: 3px;
-  font-size: 18px;
-  font-weight: 300;
-}
-
 .address {
   font-size: 18px;
-}
-
-.gray-100 {
-  color: #f8f9fa;
-}
-
-.gray-200 {
-  color: #e9ecef;
-}
-
-.gray-300 {
-  color: #dee2e6;
-}
-
-.gray-400 {
-  color: #ced4da;
-}
-
-.gray-500 {
-  color: #adb5bd;
-}
-
-.gray-600 {
-  color: #6c757d;
-}
-
-.gray-700 {
-  color: #495057;
-}
-
-.gray-800 {
-  color: #343a40;
 }
 
 .gray-900 {
@@ -83,20 +80,10 @@ body {
 
 .skill-chip {
   border: 2px solid #212529;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
   border-radius: 5px;
-  font-weight: 500;
-  font-size: 14px;
-  margin-left: 3px;
-  margin-right: 3px;
   box-shadow: 1px 2px #343a40;
 }
 
 .md-span * a {
   color: var(--color-blue-500);
 }
-
-

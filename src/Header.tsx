@@ -4,13 +4,13 @@ export function Header() {
     <>
       <div className="flex flex-row content-center items-center">
         <span
-          className="gray-900"
-          style={{ fontWeight: 300, fontSize: 32, paddingRight: 12 }}
+          className="gray-900 max-sm:text-2xl text-[32px] pr-3"
+          style={{ fontWeight: 300 }}
         >
           <span>Nick Deis</span>
         </span>
 
-        <span className="hyperlinks">
+        <span className="relative top-[3px] font-light max-sm:text-base text-lg flex flex-row items-center">
           <a className="text-blue-500" href="tel:6143153681">
             614.315.3681
           </a>
@@ -24,10 +24,6 @@ export function Header() {
         className="mt-0 border-t-[3px]"
         style={{ borderTopColor: "#6c757d" }}
       />
-      <div
-        className="flex flex-row items-center py-1"
-        style={{ fontSize: 24 }}
-      ></div>
     </>
   );
 }

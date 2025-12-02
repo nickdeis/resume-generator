@@ -1,4 +1,4 @@
-import { createPDFName } from "./shared";
+import { createPDFName } from "../server/shared";
 
 declare const globalThis: {
   downloadPDF: (org?: string) => Promise<void>;

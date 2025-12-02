@@ -14,30 +14,20 @@ const A5_PAPER = `
         align-items: center;
         background-color: white;
       }
-
+  @media (min-width: 8in) {
       #root {
         width: 8.5in;
         height: 11in;
         background: white;
       }
+  }
 `;
 
-export function App({ serverside = false }: { serverside?: boolean }) {
-  const inlineStyle = <InlineStyle content={A5_PAPER}></InlineStyle>;
-  const resume = <Resume resumeConfig={getConfig()} />;
-  if (serverside) {
-    return (
-      <HTMLWrap>
-        {inlineStyle}
-        {resume}
-      </HTMLWrap>
-    );
-  } else {
-    return (
-      <StrictMode>
-        {inlineStyle}
-        {resume}
-      </StrictMode>
-    );
-  }
+export function App() {
+  return (
+    <StrictMode>
+      <InlineStyle content={A5_PAPER}></InlineStyle>
+      <Resume resumeConfig={getConfig()} />
+    </StrictMode>
+  );
 }

@@ -4,6 +4,7 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  cacheDir: "node_modules/.vite_cache",
   plugins: [
     react({
       babel: {
@@ -26,6 +27,7 @@ export default defineConfig({
   },
   build: {
     outDir: "build",
+
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),

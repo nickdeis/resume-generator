@@ -17,8 +17,8 @@ export default function Resume({ resumeConfig }: ResumeProps) {
   return (
     <div>
       <Header />
-      <section className="flex flex-row" style={{ paddingTop: 0 }}>
-        <Section className="w-3/4 mr-7" name="Skills">
+      <section className="flex flex-row pt-0">
+        <Section className="paper:w-3/4 max-paper:w-full mr-7" name="Skills">
           {Object.entries(Skills).map(([category, skills], i) => {
             return (
               <SkillRow
@@ -30,7 +30,10 @@ export default function Resume({ resumeConfig }: ResumeProps) {
             );
           })}
         </Section>
-        <Section className="w-1/4 flex flex-col" name="Links">
+        <Section
+          className="paper:w-1/4 flex paper:flex-col max-sprint:hidden"
+          name="Links"
+        >
           {Object.entries(Links).map(([linkKey, linkConfig], i) => {
             return (
               <Link
@@ -42,7 +45,7 @@ export default function Resume({ resumeConfig }: ResumeProps) {
           })}
         </Section>
       </section>
-      <Section name="Experience">
+      <Section name="Experience" className="w-responsive-md">
         <div className="pt-2">
           {Experience.map(
             ({ title, employer, achievements, endYear, startYear }) => {
@@ -61,12 +64,14 @@ export default function Resume({ resumeConfig }: ResumeProps) {
         </div>
       </Section>
       <Section name="Education & Certifications">
-        {resumeConfig["Education & Certifications"].map((eduConfig) => (
-          <Certification key={eduConfig.name} {...eduConfig} />
-        ))}
+        <div className="pt-1">
+          {resumeConfig["Education & Certifications"].map((eduConfig) => (
+            <Certification key={eduConfig.name} {...eduConfig} />
+          ))}
+        </div>
       </Section>
       <Section name="Opensource & Public Projects">
-        <div className="grid grid-cols-2 gap-4 pt-3">
+        <div className="grid grid-cols-2 print:grid-cols-2 max-sprint:grid-cols-1 gap-4 pt-3">
           {resumeConfig.Projects.map((proj) => (
             <Project key={proj.name} {...proj} />
           ))}

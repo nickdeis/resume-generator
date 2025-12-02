@@ -19,11 +19,11 @@ export function TitleAndDate({
 }: TitleAndDateProps) {
   "use memo";
   return (
-    <div className="text-base">
-      <span className="font-black">{title}</span>
+    <div className="text-base w-responsive-md">
+      <span className="font-black max-sm:text-sm">{title}</span>
       {subtext && (
         <span
-          className="italic"
+          className="italic max-sm:text-sm"
           style={{
             paddingLeft: 5,
             fontWeight: 500,
@@ -32,7 +32,7 @@ export function TitleAndDate({
           {subtext}
         </span>
       )}
-      <span className="float-right font-light text-base">
+      <span className="float-right font-light text-base max-sm:text-sm">
         {start && <span>{start}</span>}
         {end && start && (
           <span style={{ paddingLeft: 2, paddingRight: 2 }}>–</span>
@@ -65,19 +65,17 @@ export function Job({
 }: JobProps) {
   "use memo";
   return (
-    <div>
+    <div className="w-responsive-md print:py-0 max-md:py-1 max-sm:py-2">
       <TitleAndDate title={title} subtext={employer} start={start} end={end} />
       {points && (
         <ul
-          className="list-disc"
+          className="list-disc pl-5 text-xs w-responsive-md"
           style={{
-            fontSize: 13,
-            paddingLeft: 20,
             ...listStyle,
           }}
         >
           {points.map((point) => (
-            <li>
+            <li className="w-responsive-md">
               <MarkdownSpan>{point}</MarkdownSpan>
             </li>
           ))}
