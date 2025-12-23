@@ -5,7 +5,7 @@
   /**9in or 864 pixels**/
   --breakpoint-paper: 54rem;
   /**8in**/
-  --breakpoint-sprint: 48rem;
+  --breakpoint-sprint: 46rem;
 }
 
 body {

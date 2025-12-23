@@ -1,39 +1,4 @@
-export type ResumeConfig = {
-  Skills: Record<string, string[]>;
-  Links: Record<string, LinkConfig>;
-  Experience: JobConfig[];
-  "Education & Certifications": CertConfig[];
-  Projects: ProjectConfig[];
-};
-
-export type LinkConfig = {
-  href: string;
-  icon: string;
-  text: string;
-};
-
-export type JobConfig = {
-  title: string;
-  employer?: string;
-  startYear?: number;
-  endYear?: number | "Present";
-  achievements?: string[];
-};
-
-export type CertConfig = {
-  name: string;
-  source?: string;
-  startYear?: number;
-  endYear?: number;
-  note?: string;
-};
-
-export type ProjectConfig = {
-  name: string;
-  points: string[];
-  link: string;
-  tech: string[];
-};
+import { ResumeConfig } from "./src/types";
 
 export function getConfig() {
   try {
@@ -44,7 +9,7 @@ export function getConfig() {
   }
 }
 
-const DEFAULT_RESUME_CONFIG: ResumeConfig = {
+export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
   Skills: {
     Languages: ["Typescript", "Python", "Java", "Scala", "SQL"],
     Frontend: ["React", "Tailwind", "Webpack", "d3", "Mapbox", "Vite"],
@@ -78,10 +43,10 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2021,
       endYear: 2025,
       achievements: [
-        "Led and developed a team that ships industry first and patented visualizations",
+        "Led and developed a team that shipped industry-first and patented visualizations",
         "Deployed a next-gen conversational AI that replies with maps, graphs, and tables",
         "Led the technical effort to certify the core platform for IL5, FedRAMP High, and SOC2 compliance",
-        "Initialized the companies product-led marketing, increasing inbound leads by 23%",
+        "Initialized the company's product-led marketing, increasing inbound leads by 23%",
         "Saved $600k+ and increased performance 2x by building an AI-powered search implementation",
         "Built a tracker of natural disasters and their impact on supply chains using Mapbox and PostGIS",
       ],
@@ -103,7 +68,7 @@ const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       startYear: 2014,
       endYear: 2019,
       achievements: [
-        "Built a realtime AI/ML enablement platform using Websockets, React, Webpack, and Spring",
+        "Built a real-time AI/ML enablement platform using Websockets, React, Webpack, and Spring",
         "Led the engineering effort for a national level project using Apache Storm and Spring",
         "Extended ElasticSearch to have both document and field security for banking applications",
       ],

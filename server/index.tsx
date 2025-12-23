@@ -2,7 +2,7 @@ import express from "express";
 import puppeteer from "puppeteer";
 import { getConfig } from "../resfig";
 import ViteExpress from "vite-express";
-import { createPDFName } from "./shared";
+import { createPDFName, createTextFormat } from "./shared";
 import { createServer as createViteServer, build } from "vite";
 import { readFile } from "fs/promises";
 import path from "path";
@@ -72,7 +72,12 @@ function getLocalNet() {
 
 const app = express();
 app.use(compression());
-
+app.get("/api/text", async (req, res) => {
+  const textFormat = createTextFormat(getConfig());
+  res.set("Content-Type", "text/plain");
+  res.status(200);
+  res.end(textFormat);
+});
 app.get("/api/pdf", async (req, res) => {
   const { org, downloadable } = req.query;
   const browser = await puppeteer.launch();

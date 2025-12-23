@@ -32,9 +32,11 @@
     "@vitejs/plugin-react-swc": "^3.9.0",
     "autoprefixer": "^10.4.4",
     "babel-plugin-react-compiler": "^1.0.0",
+    "openai": "^6.15.0",
     "puppeteer": "^13.5.1",
     "tailwindcss": "^4.1.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "typescript-json-schema": "^0.67.1"
   },
   "type": "module"
 }

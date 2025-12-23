@@ -1,5 +1,5 @@
 import MarkdownSpan from "./MarkdownSpan";
-import { ProjectConfig } from "../resfig";
+import { ProjectConfig } from "./types";
 
 export default function Project({ name, points, link, tech }: ProjectConfig) {
   "use memo";

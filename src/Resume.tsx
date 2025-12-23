@@ -1,5 +1,5 @@
 import Certification from "./Certification";
-import { ResumeConfig } from "../resfig";
+import { ResumeConfig } from "./types";
 import { Header } from "./Header";
 import { Job } from "./Job";
 import { Link } from "./Link";
@@ -18,7 +18,7 @@ export default function Resume({ resumeConfig }: ResumeProps) {
     <div>
       <Header />
       <section className="flex flex-row pt-0">
-        <Section className="paper:w-3/4 max-paper:w-full mr-7" name="Skills">
+        <Section className="w-6/8 mr-7" name="Skills">
           {Object.entries(Skills).map(([category, skills], i) => {
             return (
               <SkillRow
@@ -30,10 +30,7 @@ export default function Resume({ resumeConfig }: ResumeProps) {
             );
           })}
         </Section>
-        <Section
-          className="paper:w-1/4 flex paper:flex-col max-sprint:hidden"
-          name="Links"
-        >
+        <Section className="flex flex-col" name="Links">
           {Object.entries(Links).map(([linkKey, linkConfig], i) => {
             return (
               <Link

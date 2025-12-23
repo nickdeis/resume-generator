@@ -69,7 +69,7 @@ export function Job({
       <TitleAndDate title={title} subtext={employer} start={start} end={end} />
       {points && (
         <ul
-          className="list-disc pl-5 text-xs w-responsive-md"
+          className="list-disc pl-5 text-[12px] w-responsive-md"
           style={{
             ...listStyle,
           }}
