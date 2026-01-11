@@ -6,10 +6,14 @@
   --breakpoint-paper: 54rem;
   /**8in**/
   --breakpoint-sprint: 46rem;
+  --breakpoint-links: 730px;
+  --breakpoint-xs: 508px;
+  --breakpoint-header: 520px;
+  --color-std-gray: #6c757d;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato" !important;
 }
 
 @media print {
@@ -24,8 +28,6 @@ body {
     border: none !important;
   }
   #root {
-    width: 8.5in;
-    height: 11in;
     background: white;
   }
   body {
@@ -35,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
+    font-family: "Lato", sans-serif;
   }
 }
 
@@ -42,8 +45,22 @@ body {
   @apply max-md:w-full max-md:max-w-screen max-md:mx-auto;
 }
 
+.two-by-two-grid {
+  display: grid;
+  gap: calc(var(--spacing) * 4);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 @page {
   size: Letter portrait;
+  /**Sets the margins for printing**/
+  margin-top: 1mm;
+  margin-left: 2mm;
+  margin-right: 2mm;
+  margin-bottom: 1mm;
+  padding-left: 3mm;
+  padding-right: 3mm;
 }
 
 /**For BW printers**/
@@ -84,6 +101,23 @@ body {
   box-shadow: 1px 2px #343a40;
 }
 
-.md-span * a {
-  color: var(--color-blue-500);
+a {
+  color: var(--color-blue-700);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+@media print and (color: 0),
+  print and (monochrome: 1),
+  (forced-colors: active) {
+  a {
+    color: black !important;
+  }
 }

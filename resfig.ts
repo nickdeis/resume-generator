@@ -1,4 +1,8 @@
 import { ResumeConfig } from "./src/types";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { FaSquareGithub } from "react-icons/fa6";
+import { LiaSmsSolid } from "react-icons/lia";
+import { MdAlternateEmail } from "react-icons/md";
 
 export function getConfig() {
   try {
@@ -10,7 +14,7 @@ export function getConfig() {
 }
 
 export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
-  Skills: {
+  skills: {
     Languages: ["Typescript", "Python", "Java", "Scala", "SQL"],
     Frontend: ["React", "Tailwind", "Webpack", "d3", "Mapbox", "Vite"],
     Data: ["Snowflake", "Postgres", "Neptune", "Spark", "Numpy", "OpenSearch"],
@@ -24,19 +28,43 @@ export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       "LLM",
     ],
   },
-  Links: {
-    Github: {
-      href: "https://github.com/nickdeis",
-      icon: "fa-brands fa-github-square",
-      text: "github.com/nickdeis",
-    },
-    LinkedIn: {
-      href: "https://www.linkedin.com/in/nick-deis/",
-      icon: "fa-brands fa-linkedin",
-      text: "linkedin.com/in/nick-deis",
-    },
+  links: {
+    header: [
+      {
+        Icon: LiaSmsSolid,
+        href: "sms:6143153681",
+        text: "614.315.3681",
+        className: "min-xs:hidden min-xs:mr-2",
+        mobileText: "Text",
+      },
+      {
+        Icon: MdAlternateEmail,
+        href: "mailto:nickjdeis@gmail.com",
+        text: "nickjdeis@gmail.com",
+        className: "min-xs:hidden",
+        mobileText: "Email",
+      },
+      {
+        href: "https://nickdeis.com",
+        text: "nickdeis.com",
+      },
+    ],
+    subheader: [
+      {
+        href: "https://github.com/nickdeis",
+        Icon: FaSquareGithub,
+        text: "github.com/nickdeis",
+        mobileText: "Github",
+      },
+      {
+        href: "https://www.linkedin.com/in/nick-deis/",
+        Icon: IoLogoLinkedin,
+        text: "linkedin.com/in/nick-deis",
+        mobileText: "LinkedIn",
+      },
+    ],
   },
-  Experience: [
+  experience: [
     {
       title: "Lead Software Engineer, Data Visualization",
       employer: "Interos",
@@ -100,10 +128,10 @@ export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       ],
     },
   ],
-  "Education & Certifications": [
+  education: [
     { name: "AWS Certified Solutions Architect - Associate", startYear: 2019 },
     {
-      name: "BS, Economics",
+      name: "Bachelor of Science, Economics",
       source: "The Ohio State University",
       endYear: 2013,
       note: "Minors in Mathematics and Statistics",
@@ -115,7 +143,7 @@ export const DEFAULT_RESUME_CONFIG: ResumeConfig = {
       note: "[Focus Group Composition in Heterogeneous Populations](https://kb.osu.edu/bitstream/handle/1811/54959/Focus_Group_Composition_in_Heterogenous_Populations_6613.2.pdf?sequence=1)",
     },
   ],
-  Projects: [
+  projects: [
     {
       name: "eslint-plugin-no-secrets",
       link: "https://github.com/nickdeis/eslint-plugin-no-secrets",

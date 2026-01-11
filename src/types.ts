@@ -1,15 +1,21 @@
+import type { IconType } from "react-icons";
 export type ResumeConfig = {
-  Skills: Record<string, string[]>;
-  Links: Record<string, LinkConfig>;
-  Experience: JobConfig[];
-  "Education & Certifications": CertConfig[];
-  Projects: ProjectConfig[];
+  skills: Record<string, string[]>;
+  links: {
+    header: LinkConfig[];
+    subheader: LinkConfig[];
+  };
+  experience: JobConfig[];
+  education: CertConfig[];
+  projects: ProjectConfig[];
 };
 
 export type LinkConfig = {
   href: string;
-  icon: string;
+  Icon?: IconType;
   text: string;
+  className?: string;
+  mobileText?: string;
 };
 
 export type JobConfig = {

@@ -11,40 +11,29 @@ export type ResumeProps = {
   resumeConfig: ResumeConfig;
 };
 
-export default function Resume({ resumeConfig }: ResumeProps) {
+export default function Resume({
+  resumeConfig: { skills, links, experience, education, projects },
+}: ResumeProps) {
   "use memo";
-  const { Skills, Links, Experience } = resumeConfig;
   return (
     <div>
-      <Header />
-      <section className="flex flex-row pt-0">
-        <Section className="w-6/8 mr-7" name="Skills">
-          {Object.entries(Skills).map(([category, skills], i) => {
-            return (
-              <SkillRow
-                key={category}
-                className={i === 0 ? "pt-3" : undefined}
-                category={category}
-                skills={skills}
-              />
-            );
-          })}
-        </Section>
-        <Section className="flex flex-col" name="Links">
-          {Object.entries(Links).map(([linkKey, linkConfig], i) => {
-            return (
-              <Link
-                key={linkKey}
-                className={i === 0 ? "pt-3" : undefined}
-                {...linkConfig}
-              />
-            );
-          })}
-        </Section>
-      </section>
+      <Header links={links} />
+      <Section name="Skills">
+        {Object.entries(skills).map(([category, skills], i) => {
+          return (
+            <SkillRow
+              key={category}
+              className={i === 0 ? "pt-3" : undefined}
+              category={category}
+              skills={skills}
+            />
+          );
+        })}
+      </Section>
+
       <Section name="Experience" className="w-responsive-md">
-        <div className="pt-2">
-          {Experience.map(
+        <div className="pt-1 flex flex-col gap-1">
+          {experience.map(
             ({ title, employer, achievements, endYear, startYear }) => {
               return (
                 <Job
@@ -54,6 +43,7 @@ export default function Resume({ resumeConfig }: ResumeProps) {
                   points={achievements}
                   end={endYear}
                   start={startYear}
+                  XSGrid
                 ></Job>
               );
             }
@@ -62,14 +52,14 @@ export default function Resume({ resumeConfig }: ResumeProps) {
       </Section>
       <Section name="Education & Certifications">
         <div className="pt-1">
-          {resumeConfig["Education & Certifications"].map((eduConfig) => (
+          {education.map((eduConfig) => (
             <Certification key={eduConfig.name} {...eduConfig} />
           ))}
         </div>
       </Section>
-      <Section name="Opensource & Public Projects">
+      <Section name="Opensource & Public Projects" className="print:pt-3">
         <div className="grid grid-cols-2 print:grid-cols-2 max-sprint:grid-cols-1 gap-4 pt-3">
-          {resumeConfig.Projects.map((proj) => (
+          {projects.map((proj) => (
             <Project key={proj.name} {...proj} />
           ))}
         </div>

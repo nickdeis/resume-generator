@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 export type SectionTypes = {
@@ -12,11 +13,12 @@ export function Section({
 }: React.PropsWithChildren<SectionTypes>) {
   "use memo";
   return (
-    <section className={className} style={{ paddingBottom: 10 }}>
-      <span className="font-bold" style={{ fontWeight: 700, fontSize: 18 }}>
-        {name}
-      </span>
-      <hr className="mt-0 border-t-2" style={{ borderTopColor: "#6c757d" }} />
+    <section className={clsx(className, "pb-2.5")}>
+      <div className="flex items-center">
+        <hr className="border-t-2 w-[1%] border-t-std-gray" />
+        <span className="px-2 font-light text-xl grow-0">{name}</span>
+        <hr className="border-t-2 grow border-t-std-gray" />
+      </div>
       {children}
     </section>
   );

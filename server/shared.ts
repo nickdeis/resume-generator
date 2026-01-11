@@ -6,13 +6,15 @@ export function createPDFName(org?: string) {
 }
 const bulletChar = "•";
 export function createTextFormat(resfig: ResumeConfig) {
-  return resfig.Experience.map((experience) => {
-    return `
-${boldifyText(experience.title)}\n\n   ${(experience.achievements || [])
-      .map((point) => `${bulletChar} ${point}`)
-      .join("\n   ")}
+  return resfig.experience
+    .map((experience) => {
+      return `
+${boldifyText(experience.title)}\n\n${(experience.achievements || [])
+        .map((point) => `${bulletChar} ${point}`)
+        .join("\n")}
     `.trim();
-  }).join("\n\n");
+    })
+    .join("\n\n");
 }
 const blockCode = 55349;
 function boldifyChar(char: string) {

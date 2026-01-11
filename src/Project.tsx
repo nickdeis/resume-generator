@@ -10,7 +10,7 @@ export default function Project({ name, points, link, tech }: ProjectConfig) {
       </a>
       <ul className="text-sm list-disc pl-4">
         {points.map((point) => (
-          <li>
+          <li key={point}>
             <MarkdownSpan>{point}</MarkdownSpan>
           </li>
         ))}
